@@ -13,6 +13,6 @@ jobs:
       - run: sudo docker image rm content-api:latest
       - uses: actions/checkout@v2
       - run: cd content-api && sudo docker build -t content-api:latest .
-      - run: sudo docker tag content-api:latest fabmedicala69.azurecr.io/content-api/content-api
-      - run: sudo docker push fabmedicala69.azurecr.io/content-api/content-api
+      - run: sudo docker tag content-api:latest fabmedicalA69.azurecr.io/content-api/content-api
+      - run: sudo docker push fabmedicalA69.azurecr.io/content-api/content-api
       - run: sudo docker run -d -e MONGODB_CONNECTION='mongodb://172.17.0.1:27017/contentdb' --name content-api -p 3001:3001 content-api
