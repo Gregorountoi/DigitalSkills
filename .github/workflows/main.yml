@@ -13,6 +13,6 @@ jobs:
       - run: sudo docker image rm content-api:latest
       - uses: actions/checkout@v2
       - run: cd content-web && sudo docker build -t content-api:latest .
-      - run: sudo docker tag content-web:latest fabmedicala69.azurecr.io/contentweb/content-api
+      - run: sudo docker tag content-api:latest fabmedicala69.azurecr.io/contentweb/content-api
       - run: sudo docker push fabmedical3pk.azurecr.io/contentweb/content-api
       - run: sudo docker run -d --name content-web -p 3000:3000 content-api
